@@ -19,20 +19,20 @@ public class Calc {
             int a = r.nextInt(RANGE);
             int b = r.nextInt(RANGE);
             switch (r.nextInt(OPERANTORS_COUNT)) {
-                case 0:
+                case 0 -> {
                     row[0] = a + " + " + b;
                     row[1] = Integer.toString(a + b);
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     row[0] = a + " - " + b;
                     row[1] = Integer.toString(a - b);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     row[0] = a + " * " + b;
                     row[1] = Integer.toString(a * b);
-                    break;
-                default:
-                    break;
+                }
+                default -> {
+                }
             }
         }
         return res;

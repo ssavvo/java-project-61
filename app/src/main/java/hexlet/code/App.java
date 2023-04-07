@@ -19,29 +19,17 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        var input = scanner.nextInt();
+        var input = scanner.next();
         System.out.println("Your choice: " + input + "\n");
         switch (input) {
-            case 1:
-                Cli.greeting(scanner);
-                break;
-            case 2:
-                Even.start();
-                break;
-            case 3:
-                Calc.start();
-                break;
-            case 4:
-                GCD.start();
-                break;
-            case 5:
-                Progression.start();
-                break;
-            case 6:
-                Prime.start();
-                break;
-            default:
-                break;
+            case "1" -> Cli.greeting(scanner);
+            case "2" -> Even.start();
+            case "3" -> Calc.start();
+            case "4" -> GCD.start();
+            case "5" -> Progression.start();
+            case "6" -> Prime.start();
+            default -> {
+            }
         }
         scanner.close();
     }
