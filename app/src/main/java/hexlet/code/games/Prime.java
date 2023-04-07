@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class Prime {
     public static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static final int RANGE = 100;
     public static void start() {
         var data = generateQnA();
         Engine.run(RULES, data);
@@ -14,7 +15,7 @@ public class Prime {
         String[][] res = new String[Engine.MAX_ROUNDS][2];
         Random r = new Random();
         for (String[] row: res) {
-            int number = r.nextInt(100);
+            int number = r.nextInt(RANGE);
             String answer = isPrime(number) ? "yes" : "no";
             row[0] = Integer.toString(number);
             row[1] = answer;
